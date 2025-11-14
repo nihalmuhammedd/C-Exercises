@@ -1,0 +1,24 @@
+char    *ft_strrev(char *str)
+{
+    int i = 0;
+    int last;
+    char temp;
+
+    while(str[i])
+    i++;
+
+    last = i - 1;
+    i = 0;
+
+    while(last > i)
+    {
+        temp = str[i];
+        str[i] = str[last];
+        str[last] = temp;
+
+        i++;
+        last--;
+    }
+    return(str);
+    
+}
